@@ -9,6 +9,7 @@ def load_data():
 def main():
     st.write(pd.__version__)
     st.write(st.__version__)
+    st.write("-"*50)
     data = load_data()
     # st.table(data)
     # st.data_editor & st.column_config

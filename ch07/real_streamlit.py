@@ -33,12 +33,12 @@ def main():
     # Show the plot
     st.plotly_chart(fig)
 
-    # options = st.multiselect(
-    #     '건물용도',
-    #     ['단독다가구', '오피스텔', '연립다세대', '아파트'])
-    #
-    # result = df[df['HOUSE_TYPE'].isin(options)].reset_index(drop=True)
-    # st.table(result)
+    options = st.multiselect(
+        '건물용도',
+        ['단독다가구', '오피스텔', '연립다세대', '아파트'])
+
+    result = df[df['HOUSE_TYPE'].isin(options)].reset_index(drop=True)
+    st.table(result)
 
     st.write("-" * 50)
     st.write(df.describe())
